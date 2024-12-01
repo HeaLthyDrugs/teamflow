@@ -34,13 +34,15 @@ export default function RootLayout({
     }}>
       <html lang="en">
         <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider
-          attribute="class"
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          {children}
-        </ThemeProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem={false}
+          >
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
